@@ -14,7 +14,7 @@
 
 @class ViewControllerIPad;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>{
+@interface AppDelegate : UIResponder <UIApplicationDelegate> {
 	NSMutableArray *arrayServerList;
     GlobalData *obj;
 }
