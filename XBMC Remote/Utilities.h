@@ -78,5 +78,7 @@ typedef enum {
 + (NSString*)getThumbnailFromDictionary:(NSDictionary*)dict useBanner:(BOOL)useBanner useIcon:(BOOL)useIcon;
 + (NSString*)formatStringURL:(NSString*)path serverURL:(NSString*)serverURL;
 + (UIImage*)imageWithShadow:(UIImage*)source radius:(CGFloat)radius;
++ (void)turnTorchOn:(id)sender on:(BOOL)torchOn;
++ (BOOL)isTorchOn;
 
 @end
