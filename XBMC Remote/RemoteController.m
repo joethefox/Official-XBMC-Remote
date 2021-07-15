@@ -177,8 +177,8 @@
         frame.origin.y = 0;
         quickHelpView.frame = frame;
         frame = subsInfoLabel.frame;
-        frame.size.width = [[UIScreen mainScreen] bounds].size.width;
-        frame.origin.x = ((remoteControlView.frame.size.width - [[UIScreen mainScreen] bounds].size.width) / 2);
+        frame.size.width = UIScreen.mainScreen.bounds.size.width;
+        frame.origin.x = ((remoteControlView.frame.size.width - UIScreen.mainScreen.bounds.size.width) / 2);
         subsInfoLabel.frame = frame;
     }
     else {
@@ -905,9 +905,6 @@ NSInteger buttonAction;
     }
 }
 
-
-
-
 - (IBAction)startVibrate:(id)sender {
     NSString *action;
     NSArray *params;
@@ -1138,7 +1135,6 @@ NSInteger buttonAction;
         quickHelpView.alpha = 1.0;
         [UIView commitAnimations];
         [self.navigationController setNavigationBarHidden:NO animated:YES];
-
     }
     else {
         [UIView beginAnimations:nil context:nil];
@@ -1147,7 +1143,6 @@ NSInteger buttonAction;
         quickHelpView.alpha = 0.0;
         [UIView commitAnimations];
         [self.navigationController setNavigationBarHidden:NO animated:YES];
-
     }
 }
 
@@ -1228,7 +1223,6 @@ NSInteger buttonAction;
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"Input.OnInputFinished" object:nil userInfo:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
- 
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
